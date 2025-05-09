@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>test2</name>
+  <version>0.0.0</version>
+  <description>GPS路径发布与TF广播节点集成</description>
+  <maintainer email="bill@todo.todo">bill</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- 必需的运行与构建依赖 -->
+  <depend>rclcpp</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+
+  <!-- 测试用 -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
+
+
