@@ -21,7 +21,6 @@
 
   <export>
     <build_type>ament_cmake</build_type>
+    <launch_depend>your_launch_dependency</launch_depend>
   </export>
 </package>
-
-

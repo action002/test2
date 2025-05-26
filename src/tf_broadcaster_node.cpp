@@ -21,7 +21,7 @@ private:
 
         transformStamped.header.stamp = rclcpp::Clock().now();
         transformStamped.header.frame_id = "world";
-        transformStamped.child_frame_id = "robot";
+        transformStamped.child_frame_id = "enu";
 
         transformStamped.transform.translation.x = 1.0;
         transformStamped.transform.translation.y = 2.0;
@@ -35,8 +35,8 @@ private:
         broadcaster_->sendTransform(transformStamped);
     }
 
-    std::shared_ptr<tf2_ros::TransformBroadcaster> broadcaster_;
     rclcpp::TimerBase::SharedPtr timer_;
+    std::shared_ptr<tf2_ros::TransformBroadcaster> broadcaster_;
 };
 
 int main(int argc, char **argv)
@@ -46,3 +46,5 @@ int main(int argc, char **argv)
     rclcpp::shutdown();
     return 0;
 }
+
+
